@@ -28,7 +28,7 @@ import defaultOverscanIndicesGetter, {
 } from './defaultOverscanIndicesGetter';
 import updateScrollIndexHelper from './utils/updateScrollIndexHelper';
 import defaultCellRangeRenderer from './defaultCellRangeRenderer';
-import scrollbarSize from 'dom-helpers/scrollbarSize';
+import scrollbarSize from '../utils/scrollbarSize';
 import {polyfill} from 'react-lifecycles-compat';
 import {
   requestAnimationTimeout,

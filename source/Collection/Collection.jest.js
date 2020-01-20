@@ -2,7 +2,7 @@
  * Tests Collection and CollectionView.
  * @flow
  */
-import getScrollbarSize from 'dom-helpers/scrollbarSize';
+import getScrollbarSize from '../utils/scrollbarSize';
 import * as React from 'react';
 import {findDOMNode} from 'react-dom';
 import {Simulate} from 'react-dom/test-utils';

@@ -1,5 +1,31 @@
 const env = process.env.NODE_ENV;
 
+if (env === 'jsx') {
+  module.exports = {
+    ignore: [
+      '**/*.jest.js',
+      '**/*.e2e.js',
+      '**/*.ssr.js',
+      '**/*.example.js',
+      'source/demo',
+      'source/jest-*.js',
+      'source/TestUtils.js',
+    ],
+    plugins: [
+      // Transform class properties to assignments in the constructor.
+      ['@babel/plugin-proposal-class-properties', {loose: true}],
+      // Preserve JSX, by adding a syntax parser able to understand it.
+      ['@babel/plugin-syntax-jsx', {}],
+      // Remove prop types altogether.
+      ['transform-react-remove-prop-types', {mode: 'remove'}],
+    ],
+    presets: [
+      // Parse flow (and remove it).
+      '@babel/preset-flow',
+    ],
+  };
+}
+
 if (env === 'commonjs' || env === 'es') {
   module.exports = {
     ignore: [

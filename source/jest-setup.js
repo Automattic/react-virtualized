@@ -1,4 +1,4 @@
-jest.mock('dom-helpers/scrollbarSize', () => {
+jest.mock('./utils/scrollbarSize', () => {
   return function getScrollbarSize() {
     return 20;
   };

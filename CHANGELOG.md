@@ -1,5 +1,13 @@
 ## Changelog
 
+##### Changes in @automattic/react-virtualized fork
+
+- 🎉 Add "jsx" config (minimal transpilation preserving JSX) and use it exclusively in package.
+- 🎉 Remove `@babel/runtime` and `prop-types` runtime dependencies.
+- 🎉 Remove dependency on `dom-helpers` and copy the relevant code from that project over to `utils/`. This is done to avoid a transitive dependency on `@babel/runtime`.
+- 🎉 Add `"sideEffects": false` to package.json.
+- 🎉 Add pre and post steps to testing, in order to build the required UMD version. Since we're not shipping it, we need to specially build it for the tests.
+
 ##### 9.21.2
 
 - 🎉 Update prettier ([wuweiweiwu](https://github.com/wuweiweiwu) - [#1455](https://github.com/bvaughn/react-virtualized/pull/1455))
